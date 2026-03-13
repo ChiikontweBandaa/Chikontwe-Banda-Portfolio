@@ -13,7 +13,7 @@ University Teaching Hospital parking management system that:
 - Allows reservations
 - Supports payment tracking
 
-Repository: 
+Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/cc9b9470a7f199336d3960c149a531c670e3c24d/Hospital%20Parking%20Management%20System
 
 2. Task Management App
    Technologies: php, Xampp, MySQL
