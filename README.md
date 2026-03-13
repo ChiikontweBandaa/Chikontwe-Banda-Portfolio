@@ -37,7 +37,7 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1
    Enabled users to carry out various tasks done in a library such as borrowing and returning a book
    Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/3627ae56faca4a70c2c34199599c5750e60524ce/Library%20Management%20System%20Application
    
-   5. Micro Finance Application
+5. Micro Finance Application
       Technologies: HTML, CSS, Javascript
       - Built a micro-finance platform designed to help business
       - owners apply for loans
