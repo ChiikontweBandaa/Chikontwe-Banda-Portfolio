@@ -32,7 +32,10 @@ A digital watch web application built using frontend technologies.
 Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1dbc398e25db1d6b44874d38391697c23c26ca6c/ChikoWatchStore.html
 
 5. Library Management System
+   
    Technologies: C#, WinForms, MySQL
+   Enabled users to carry out various tasks done in a library such as borrowing and returning a book
+   Repository: 
 
  Skills
 - HTML, CSS, JavaScript
@@ -48,4 +51,5 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1
 
 Contact
 Email: chikontwebanda6@gmail.com 
-GitHub: https://github.com/username
+GitHub: 
+
