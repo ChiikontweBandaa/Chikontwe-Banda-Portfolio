@@ -12,6 +12,7 @@ University Teaching Hospital parking management system that:
 - Shows available parking spaces
 - Allows reservations
 - Supports payment tracking
+- This project opens using the setup.exe which should be placed on the desktop. login details are in the database file.
 
 Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/cc9b9470a7f199336d3960c149a531c670e3c24d/Hospital%20Parking%20Management%20System
 
@@ -23,6 +24,7 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/c
    - update tasks
    - delete tasks
    - https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/19edf285437115b8f77fa50063b978da9200d2d3/task_manager
+     
 
 3. HTML Watch App
 Technologies: HTML, CSS, JavaScript
@@ -31,13 +33,16 @@ A digital watch web application built using frontend technologies.
 
 Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1dbc398e25db1d6b44874d38391697c23c26ca6c/ChikoWatchStore.html
 
+
 4. Library Management System
    
    Technologies: C#, WinForms, MySQL
    Enabled users to carry out various tasks done in a library such as borrowing and returning a book
    Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/3627ae56faca4a70c2c34199599c5750e60524ce/Library%20Management%20System%20Application
+   This project opens using the setup.exe which should be placed on the desktop. login details are in the database file. a User can log in either as a member or admin.
+
    
-5. Micro Finance Application
+6. Micro Finance Application
       Technologies: HTML, CSS, Javascript
       - Built a micro-finance platform designed to help business
       - owners apply for loans
