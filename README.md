@@ -22,6 +22,7 @@ Repository:
    - edit tasks
    - update tasks
    - delete tasks
+   - https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/19edf285437115b8f77fa50063b978da9200d2d3/task_manager
 
 4. HTML Watch App
 Technologies: HTML, CSS, JavaScript
