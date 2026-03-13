@@ -36,13 +36,14 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1
    Technologies: C#, WinForms, MySQL
    Enabled users to carry out various tasks done in a library such as borrowing and returning a book
    Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/3627ae56faca4a70c2c34199599c5750e60524ce/Library%20Management%20System%20Application
+   
    5. Micro Finance Application
       Technologies: HTML, CSS, Javascript
       - Built a micro-finance platform designed to help business
       - owners apply for loans
       - receive smart recommendations on suitable loan options.
       - Added features for insurance services, savings account options, and business growth tips.
-        Repository: 
+        Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/db35fa80b45a75d39d0c9415dc82b8342956f394/ChikontweMicroFinance.html
 
  Skills
 - HTML, CSS, JavaScript
