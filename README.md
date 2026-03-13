@@ -24,18 +24,18 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/c
    - delete tasks
    - https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/19edf285437115b8f77fa50063b978da9200d2d3/task_manager
 
-4. HTML Watch App
+3. HTML Watch App
 Technologies: HTML, CSS, JavaScript
 
 A digital watch web application built using frontend technologies.
 
 Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1dbc398e25db1d6b44874d38391697c23c26ca6c/ChikoWatchStore.html
 
-5. Library Management System
+4. Library Management System
    
    Technologies: C#, WinForms, MySQL
    Enabled users to carry out various tasks done in a library such as borrowing and returning a book
-   Repository: 
+   Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/tree/3627ae56faca4a70c2c34199599c5750e60524ce/Library%20Management%20System%20Application
 
  Skills
 - HTML, CSS, JavaScript
