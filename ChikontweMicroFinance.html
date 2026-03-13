@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chikontwe Micro Finance</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --danger: #e74c3c;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 25%;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Loan Products Section */
+        .loan-products {
+            background-color: var(--light);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .product-amount {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+        }
+
+        .product-body {
+            padding: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: var(--success);
+            margin-right: 0.5rem;
+        }
+
+        .product-footer {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* Savings Accounts Section */
+        .savings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .savings-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .savings-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .savings-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .savings-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .savings-rate {
+            font-size: 1.2rem;
+        }
+
+        .savings-body {
+            padding: 1.5rem;
+        }
+
+        .savings-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .savings-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .savings-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Insurance Products Section */
+        .insurance-products {
+            background-color: var(--light);
+        }
+
+        .insurance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .insurance-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .insurance-header {
+            background-color: var(--accent);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .insurance-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .insurance-premium {
+            font-size: 1.2rem;
+        }
+
+        .insurance-body {
+            padding: 1.5rem;
+        }
+
+        .insurance-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .insurance-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .insurance-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Loan Calculator */
+        .calculator-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .result-container {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light);
+            border-radius: 5px;
+            display: none;
+        }
+
+        .result-container h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .loan-recommendation {
+            background-color: var(--success);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Business Tips */
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .tip-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            width: 40px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Location Section */
+        .location-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .location-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .location-map {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">💰</span>
+                <h1>Chikontwe Micro Finance</h1>
+            </div>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#loans">Loan Products</a></li>
+                    <li><a href="#savings">Savings Accounts</a></li>
+                    <li><a href="#insurance">Insurance</a></li>
+                    <li><a href="#calculator">Loan Calculator</a></li>
+                    <li><a href="#tips">Business Tips</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Empowering Your Financial Future</h2>
+            <p>Chikontwe Micro Finance provides accessible financial services to help individuals and small businesses thrive. Founded in 2023, we're committed to community growth and financial inclusion.</p>
+            <a href="#calculator" class="btn">Apply for a Loan</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Chikontwe Micro Finance was established in 2023 with a vision to provide financial services to underserved communities. We believe that everyone deserves access to fair financial products that can help them achieve their dreams.</p>
+                    <p>Our mission is to empower individuals and small business owners by providing them with the financial tools and resources they need to succeed. We offer a range of services including microloans, savings accounts, and financial education.</p>
+                    <p>With a focus on personalized service and community development, we're proud to be a trusted partner in our clients' financial journeys.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for image -->
+                    <div style="background-color: #2e86c1; height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">Our Team</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💵</div>
+                    <h3>Microloans</h3>
+                    <p>Small, short-term loans designed to help entrepreneurs start or expand their businesses with flexible repayment options.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏦</div>
+                    <h3>Savings Accounts</h3>
+                    <p>Secure savings options with competitive interest rates to help you build financial security for the future.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Financial Education</h3>
+                    <p>Workshops and one-on-one counseling to improve financial literacy and money management skills.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Insurance Products</h3>
+                    <p>Affordable insurance options to protect your business and family from unexpected events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Products Section -->
+    <section id="loans" class="loan-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loan Products</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-amount">K5,000</div>
+                        <div class="product-name">Starter Loan</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><span class="feature-icon">✓</span> Ideal for small business startups</li>
+                            <li><span class="feature-icon">✓</span> 6-12 month repayment period</li>
+                            <li><span class="feature-icon">✓</span> Interest rate: 10% per annum</li>
+                            <li><span class="feature-icon">✓</span> No collateral required</li>
+                            <li><span class="feature-icon">✓</span> Quick approval within 24 hours</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#calculator" class="btn" style="width: 100%; text-align: center;">Apply Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-amount">K10,000</div>
+                        <div class="product-name">Growth Loan</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><span class="feature-icon">✓</span> For expanding existing businesses</li>
+                            <li><span class="feature-icon">✓</span> 12-24 month repayment period</li>
+                            <li><span class="feature-icon">✓</span> Interest rate: 9% per annum</li>
+                            <li><span class="feature-icon">✓</span> Minimal collateral required</li>
+                            <li><span class="feature-icon">✓</span> Approval within 48 hours</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#calculator" class="btn" style="width: 100%; text-align: center;">Apply Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-amount">K20,000</div>
+                        <div class="product-name">Business Plus Loan</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><span class="feature-icon">✓</span> For established businesses</li>
+                            <li><span class="feature-icon">✓</span> 18-36 month repayment period</li>
+                            <li><span class="feature-icon">✓</span> Interest rate: 8.5% per annum</li>
+                            <li><span class="feature-icon">✓</span> Collateral required</li>
+                            <li><span class="feature-icon">✓</span> Business plan review included</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#calculator" class="btn" style="width: 100%; text-align: center;">Apply Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-amount">K50,000</div>
+                        <div class="product-name">Enterprise Loan</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><span class="feature-icon">✓</span> For large business investments</li>
+                            <li><span class="feature-icon">✓</span> 24-48 month repayment period</li>
+                            <li><span class="feature-icon">✓</span> Interest rate: 8% per annum</li>
+                            <li><span class="feature-icon">✓</span> Substantial collateral required</li>
+                            <li><span class="feature-icon">✓</span> Includes business mentoring</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#calculator" class="btn" style="width: 100%; text-align: center;">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Accounts Section -->
+    <section id="savings" class="savings">
+        <div class="container">
+            <div class="section-title">
+                <h2>Savings Accounts</h2>
+            </div>
+            <div class="savings-grid">
+                <div class="savings-card">
+                    <div class="savings-header">
+                        <div class="savings-name">Basic Savings</div>
+                        <div class="savings-rate">3% Interest Rate</div>
+                    </div>
+                    <div class="savings-body">
+                        <ul class="savings-features">
+                            <li><span class="feature-icon">✓</span> No minimum balance</li>
+                            <li><span class="feature-icon">✓</span> Free withdrawals</li>
+                            <li><span class="feature-icon">✓</span> Monthly statements</li>
+                            <li><span class="feature-icon">✓</span> Mobile banking access</li>
+                            <li><span class="feature-icon">✓</span> Ideal for personal savings</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Open Account</a>
+                    </div>
+                </div>
+                <div class="savings-card">
+                    <div class="savings-header">
+                        <div class="savings-name">Business Savings</div>
+                        <div class="savings-rate">4.5% Interest Rate</div>
+                    </div>
+                    <div class="savings-body">
+                        <ul class="savings-features">
+                            <li><span class="feature-icon">✓</span> Minimum balance: K500</li>
+                            <li><span class="feature-icon">✓</span> Higher interest rates</li>
+                            <li><span class="feature-icon">✓</span> Business transaction support</li>
+                            <li><span class="feature-icon">✓</span> Free business advisory</li>
+                            <li><span class="feature-icon">✓</span> Quarterly financial reviews</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Open Account</a>
+                    </div>
+                </div>
+                <div class="savings-card">
+                    <div class="savings-header">
+                        <div class="savings-name">Goal Savings</div>
+                        <div class="savings-rate">5% Interest Rate</div>
+                    </div>
+                    <div class="savings-body">
+                        <ul class="savings-features">
+                            <li><span class="feature-icon">✓</span> Save for specific goals</li>
+                            <li><span class="feature-icon">✓</span> Fixed monthly contributions</li>
+                            <li><span class="feature-icon">✓</span> Higher interest for commitment</li>
+                            <li><span class="feature-icon">✓</span> Withdrawal restrictions apply</li>
+                            <li><span class="feature-icon">✓</span> Perfect for education, housing</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Open Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Products Section -->
+    <section id="insurance" class="insurance-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Insurance Products</h2>
+            </div>
+            <div class="insurance-grid">
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-name">Business Protection</div>
+                        <div class="insurance-premium">From K50/month</div>
+                    </div>
+                    <div class="insurance-body">
+                        <ul class="insurance-features">
+                            <li><span class="feature-icon">✓</span> Covers business assets</li>
+                            <li><span class="feature-icon">✓</span> Business interruption coverage</li>
+                            <li><span class="feature-icon">✓</span> Liability protection</li>
+                            <li><span class="feature-icon">✓</span> Theft and burglary coverage</li>
+                            <li><span class="feature-icon">✓</span> Fire and natural disasters</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Get Quote</a>
+                    </div>
+                </div>
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-name">Health Shield</div>
+                        <div class="insurance-premium">From K30/month</div>
+                    </div>
+                    <div class="insurance-body">
+                        <ul class="insurance-features">
+                            <li><span class="feature-icon">✓</span> Hospitalization coverage</li>
+                            <li><span class="feature-icon">✓</span> Outpatient services</li>
+                            <li><span class="feature-icon">✓</span> Maternity benefits</li>
+                            <li><span class="feature-icon">✓</span> Dental and optical care</li>
+                            <li><span class="feature-icon">✓</span> Emergency evacuation</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Get Quote</a>
+                    </div>
+                </div>
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-name">Life Cover</div>
+                        <div class="insurance-premium">From K20/month</div>
+                    </div>
+                    <div class="insurance-body">
+                        <ul class="insurance-features">
+                            <li><span class="feature-icon">✓</span> Life insurance protection</li>
+                            <li><span class="feature-icon">✓</span> Funeral expenses coverage</li>
+                            <li><span class="feature-icon">✓</span> Education benefits for children</li>
+                            <li><span class="feature-icon">✓</span> Critical illness coverage</li>
+                            <li><span class="feature-icon">✓</span> Accidental death benefit</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Get Quote</a>
+                    </div>
+                </div>
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="insurance-name">Asset Protection</div>
+                        <div class="insurance-premium">From K25/month</div>
+                    </div>
+                    <div class="insurance-body">
+                        <ul class="insurance-features">
+                            <li><span class="feature-icon">✓</span> Home contents insurance</li>
+                            <li><span class="feature-icon">✓</span> Electronic devices coverage</li>
+                            <li><span class="feature-icon">✓</span> Vehicle insurance options</li>
+                            <li><span class="feature-icon">✓</span> Agricultural asset protection</li>
+                            <li><span class="feature-icon">✓</span> Theft and damage coverage</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator Section -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loan Calculator</h2>
+            </div>
+            <div class="calculator-container">
+                <form id="loan-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="income">Monthly Income (K)</label>
+                            <input type="number" id="income" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenses">Monthly Expenses (K)</label>
+                            <input type="number" id="expenses" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loan-amount">Desired Loan Amount (K)</label>
+                            <input type="number" id="loan-amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-purpose">Loan Purpose</label>
+                            <select id="loan-purpose" required>
+                                <option value="">Select Purpose</option>
+                                <option value="business">Business Expansion</option>
+                                <option value="education">Education</option>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="retail">Retail Business</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="repayment-period">Preferred Repayment Period (Months)</label>
+                        <select id="repayment-period" required>
+                            <option value="">Select Period</option>
+                            <option value="6">6 Months</option>
+                            <option value="12">12 Months</option>
+                            <option value="18">18 Months</option>
+                            <option value="24">24 Months</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Calculate Loan Options</button>
+                </form>
+                <div class="result-container" id="result-container">
+                    <h3>Your Loan Options</h3>
+                    <p id="loan-eligibility"></p>
+                    <p id="recommended-loan"></p>
+                    <p id="monthly-payment"></p>
+                    <p id="total-repayment"></p>
+                    <div class="loan-recommendation" id="loan-recommendation"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Tips Section -->
+    <section id="tips" class="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>Business Growth Tips</h2>
+            </div>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-number">1</div>
+                    <h3>Keep Detailed Records</h3>
+                    <p>Maintain accurate financial records to track your business performance and make informed decisions.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">2</div>
+                    <h3>Understand Your Market</h3>
+                    <p>Research your target customers and competitors to identify opportunities and differentiate your business.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">3</div>
+                    <h3>Manage Cash Flow</h3>
+                    <p>Monitor your income and expenses carefully to ensure you always have enough cash to operate.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">4</div>
+                    <h3>Invest in Marketing</h3>
+                    <p>Allocate resources to promote your business through both traditional and digital channels.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">5</div>
+                    <h3>Build Customer Relationships</h3>
+                    <p>Focus on providing excellent customer service to encourage repeat business and referrals.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">6</div>
+                    <h3>Plan for Growth</h3>
+                    <p>Set clear goals and develop strategies to scale your business sustainably over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We're here to help you with your financial needs. Reach out to us through any of the following channels:</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>0976949041</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>chikontwebanda6@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Burma Residential, Dama Close</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Chikontwe Micro Finance</h3>
+                    <p>Empowering communities through accessible financial services since 2023.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">in</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Loan Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#loans">Loan Products</a></li>
+                        <li><a href="#savings">Savings Accounts</a></li>
+                        <li><a href="#insurance">Insurance Products</a></li>
+                        <li><a href="#tips">Business Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📍 Burma Residential, Dama Close</li>
+                        <li>📞 0976949041</li>
+                        <li>✉️ chikontwebanda6@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Chikontwe Micro Finance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Loan Calculator Functionality
+        document.getElementById('loan-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const income = parseFloat(document.getElementById('income').value);
+            const expenses = parseFloat(document.getElementById('expenses').value);
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const loanPurpose = document.getElementById('loan-purpose').value;
+            const repaymentPeriod = parseInt(document.getElementById('repayment-period').value);
+            
+            // Calculate disposable income
+            const disposableIncome = income - expenses;
+            
+            // Determine eligibility and loan recommendation
+            let eligibilityMessage = '';
+            let recommendedLoan = '';
+            let monthlyPayment = 0;
+            let totalRepayment = 0;
+            let recommendation = '';
+            
+            if (disposableIncome <= 0) {
+                eligibilityMessage = 'Sorry, based on your income and expenses, you are not eligible for a loan at this time.';
+                document.getElementById('loan-recommendation').style.display = 'none';
+            } else {
+                // Calculate maximum loan amount (typically 3-5 times monthly disposable income)
+                const maxLoanAmount = disposableIncome * 5;
+                
+                if (loanAmount > maxLoanAmount) {
+                    eligibilityMessage = `Based on your income, the maximum loan amount we can offer is K${maxLoanAmount.toFixed(2)}.`;
+                    recommendedLoan = `We recommend applying for K${maxLoanAmount.toFixed(2)} instead.`;
+                } else {
+                    eligibilityMessage = 'Congratulations! You are eligible for a loan.';
+                    recommendedLoan = `Your requested loan amount of K${loanAmount.toFixed(2)} is within your eligibility range.`;
+                }
+                
+                // Calculate monthly payment (simple interest calculation)
+                const interestRate = 0.12; // 12% annual interest
+                const monthlyInterestRate = interestRate / 12;
+                monthlyPayment = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -repaymentPeriod));
+                totalRepayment = monthlyPayment * repaymentPeriod;
+                
+                // Loan recommendation based on income
+                if (income < 2000) {
+                    recommendation = 'Based on your income, we recommend our Starter Loan product (K5,000) designed for small businesses.';
+                } else if (income >= 2000 && income < 5000) {
+                    recommendation = 'Based on your income, you qualify for our Growth Loan product (K10,000) with competitive rates.';
+                } else if (income >= 5000 && income < 10000) {
+                    recommendation = 'Based on your income, you qualify for our Business Plus Loan (K20,000) with favorable terms.';
+                } else {
+                    recommendation = 'Based on your income, you qualify for our Enterprise Loan (K50,000) with the best terms.';
+                }
+                
+                document.getElementById('loan-recommendation').textContent = recommendation;
+                document.getElementById('loan-recommendation').style.display = 'block';
+            }
+            
+            // Display results
+            document.getElementById('loan-eligibility').textContent = eligibilityMessage;
+            document.getElementById('recommended-loan').textContent = recommendedLoan;
+            document.getElementById('monthly-payment').textContent = `Estimated Monthly Payment: K${monthlyPayment.toFixed(2)}`;
+            document.getElementById('total-repayment').textContent = `Total Repayment: K${totalRepayment.toFixed(2)}`;
+            document.getElementById('result-container').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('result-container').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            document.getElementById('contact-form').reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.querySelector('nav ul').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
