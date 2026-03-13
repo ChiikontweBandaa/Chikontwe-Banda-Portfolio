@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+	<appSettings>
+		<add key="StripePublishableKey" value="pk_test_51RQpXWPQiU1CE0gZnz3qd9ou1B3pNNhjwTHpWcoYgZo8Nr2k0Qs3Twvfn6H6L6zGzckzBFQpBHPWIMVunZYPR4HH00nXcosSvd" />
+		<add key="StripeSecretKey" value="sk_test_51RQpXWPQiU1CE0gZ0m6jA22R1c2vBcQKiEekqB6OAsx8PkirFXNgbjCB9qZi8XMDtM3gkstu8wjlg6YECJv0FjRq00NKeDIWro" />
+	</appSettings>
+</configuration>

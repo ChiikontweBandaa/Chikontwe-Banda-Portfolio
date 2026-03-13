@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="HospitalParkingSystem.exe" version="1.0.0.0" publicKeyToken="a2280cd5b888113e" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="HospitalParkingSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="HospitalParkingSystem.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HospitalParkingSystem.exe" size="238624">
+      <assemblyIdentity name="HospitalParkingSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>G0KaK77hjBZezplR7yOxk+NTo6YYbZq3cZCBlUu44eE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Bcl.AsyncInterfaces.dll" size="21064">
+      <assemblyIdentity name="Microsoft.Bcl.AsyncInterfaces" version="1.0.0.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7VvGBff5/MOCGDq+8Gw1Ta2UartCoHYxcSB3shV9a8k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Runtime.CompilerServices.Unsafe.dll" size="23600">
+      <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" version="4.0.4.1" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GtLdciXVFioP06OzN6GUlEhSDjEwpLyOAQ7AL3YJdQA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Threading.Tasks.Extensions.dll" size="33008">
+      <assemblyIdentity name="System.Threading.Tasks.Extensions" version="4.2.0.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LJytZBDjfkT6c8zLV29BgYTxrloKJX4WWhNr2qlBoMY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="HospitalParkingSystem.exe.config" size="525">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pbr2DcBNoFj8WeC2oK6uONWVzXaCnv3uA4ef5tX0QTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP-ICPVAUK1\Chikontwe Banda" issuerKeyHash="c5e3a8604fa9f485437c9029adfe5c2062f0ace4" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>NRp9bOXXm0GDyGi9HRBCXy2oozIFZ4h2Sp7fS93kJI0=</DigestValue></Reference></SignedInfo><SignatureValue>ISgo23L6SpGkeh3yIxGJUFPtQDkRGAazkb8cZTeB/hzTQibsHhRB/yh4XbZwTBdHoR2WhTNrcgCJcYJZaPEiutBH59ZI1a4zbiMLy7P33frBP5UCptl70kEW0jPXR9HD/gi4Rl5pIoI5sQgFQOBO35WTX3zOgoGeYDMAFFlzfas=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xJPqdVj4ojeH3hGHHx5oKEPYLY+s8rD+x0uumyhdrfY8luU4fG9cAVcb+IlbTNDAM2gkZFYndWqupw4Vmx/o2wm/d3pmuAlYFu2SSencoZK1tfJXHDQlIVpHz/mCcj5rSI1sPLG940ZL+I1VV8DrG9m7uTjsSLpxA/EbzWc7/GU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="8d24e4dd4bdf9e4a7688670532a3a82d5f42101dbd68c883419bd7e56c7d1a35" Description="" Url=""><as:assemblyIdentity name="HospitalParkingSystem.exe" version="1.0.0.0" publicKeyToken="a2280cd5b888113e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-ICPVAUK1\Chikontwe Banda</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>VP19yFRC9+2zJbxduGxoAbDU18L+9AR95EVphmqK0eY=</DigestValue></Reference></SignedInfo><SignatureValue>c1SNihLUz/iIceYCG7hddvjGtbS3J7kMo6WE8dDmYx8NsQODOyg82ZRKzCWUKtnaeqvtYTu7zg3EwV6r+NDgDMCpeDgzuH8X/wXnnG/XLSktpqy0i+/L13HJA4fxGuZy/Y0Lk7hmWEW/y+FsarlppzJs+6DFDNql3xtO/dYO76g=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xJPqdVj4ojeH3hGHHx5oKEPYLY+s8rD+x0uumyhdrfY8luU4fG9cAVcb+IlbTNDAM2gkZFYndWqupw4Vmx/o2wm/d3pmuAlYFu2SSencoZK1tfJXHDQlIVpHz/mCcj5rSI1sPLG940ZL+I1VV8DrG9m7uTjsSLpxA/EbzWc7/GU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICFTCCAX6gAwIBAgIQKm9uldrN94BI7SVctKv42DANBgkqhkiG9w0BAQsFADBJMUcwRQYDVQQDHj4ATABBAFAAVABPAFAALQBJAEMAUABWAEEAVQBLADEAXABDAGgAaQBrAG8AbgB0AHcAZQAgAEIAYQBuAGQAYTAeFw0yNTA2MTgwNDEyNTRaFw0yNjA2MTgxMDEyNTRaMEkxRzBFBgNVBAMePgBMAEEAUABUAE8AUAAtAEkAQwBQAFYAQQBVAEsAMQBcAEMAaABpAGsAbwBuAHQAdwBlACAAQgBhAG4AZABhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEk+p1WPiiN4feEYcfHmgoQ9gtj6zysP7HS66bKF2t9jyW5Th8b1wBVxv4iVtM0MAzaCRkVid1aq6nDhWbH+jbCb93ema4CVgW7ZJJ6dyhkrW18lccNCUhWkfP+YJyPmtIjWw8sb3jRkv4jVVXwOsb2bu5OOxIunED8RvNZzv8ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAI2oVm+GdikpAXGKRoEzA6x95+ZOrihLMBOYMnN3mWFmp5eEi+zZHsIiGbXrr1k3gpX/HksjnQWrFcQrqOxDIeKjp0yPeIKOUYWTdVxdwe6GzD3S+ekwX56FKCIovPCPlB9PQtAVIP063p8t7n/ptJ3EPS0SCOU87yIR5GmezvAh</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

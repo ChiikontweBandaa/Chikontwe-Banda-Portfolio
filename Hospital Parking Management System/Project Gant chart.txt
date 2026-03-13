@@ -1,0 +1,22 @@
+﻿ID	Task Name	Start	Finish	Duration	Complete	Task Level	Dependency	Left Label	Right Label
+1	Planning and setup	2025-02-05 09:00	2025-02-10 17:00	4.0 d.	0.0%	0			
+2	Project Scope Definition	2025-02-05 09:00	2025-02-06 17:00	2.0 d.	0.0%	1			
+3	Database Design	2025-02-07 09:00	2025-02-10 17:00	2.0 d.	0.0%	1			
+4	UI Wireframing (WinFormsLayout)	2025-02-04 09:00	2025-02-06 17:00	3.0 d.	0.0%	0			
+5	Core Development	2025-02-07 09:00	2025-03-07 17:00	21.0 d.	0.0%	0			
+6	Login Module (Auth/Validation)	2025-02-07 09:00	2025-02-12 17:00	4.0 d.	0.0%	1			
+7	Dashboard and Navigation	2025-02-14 09:00	2025-02-19 17:00	4.0 d.	0.0%	1			
+8	Parking Space Management Module	2025-02-21 09:00	2025-02-27 17:00	5.0 d.	0.0%	1			
+9	Vehicle Registration Module	2025-02-28 09:00	2025-03-07 17:00	6.0 d.	0.0%	1			
+10	Business Logic	2025-03-07 09:00	2025-04-04 13:00	20.5 d.	0.0%	0			
+11	Ticket Issuance and pricing Logic	2025-03-07 09:00	2025-03-14 13:00	5.5 d.	0.0%	1			
+12	Payment Processing	2025-03-14 09:00	2025-03-26 13:00	8.5 d.	0.0%	1			
+13	Reservation System	2025-03-28 09:00	2025-04-04 13:00	5.5 d.	0.0%	1			
+14	Testing	2025-04-07 09:00	2025-04-29 18:00	17.0 d.	0.0%	0	10		
+15	Unit Testing (Login, Tickets, Payments)	2025-04-07 09:00	2025-04-22 17:00	12.0 d.	0.0%	1			
+16	Integration Testing	2025-04-14 09:00	2025-04-29 18:00	12.0 d.	0.0%	1			
+17	Database Deployment (SQL Server) 	2025-05-09 10:00	2025-05-27 18:00	13.0 d.	0.0%	0			
+18	Documentation	2025-05-28 10:00	2025-06-03 18:00	5.0 d.	0.0%	0			
+19	Critical Evaluation	2025-06-06 10:00	2025-06-10 18:00	3.0 d.	0.0%	0			
+20	Conclusion	2025-06-10 10:00	2025-06-16 18:00	5.0 d.	0.0%	0			
+21	Finalization and submission	2025-06-16 10:00	2025-06-16 18:00	1.0 d.	0.0%	0			
