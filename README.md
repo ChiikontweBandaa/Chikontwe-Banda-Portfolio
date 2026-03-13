@@ -1,1 +1,50 @@
-# Chikontwe-Banda-Portfolio
+Chikontwe Banda – Software Development Portfolio
+
+ Information Systems and Technology graduate from the University of Lusaka with experience in developing mobile, desktop, and web applications. Here is a portfolio of a few of the projects i have worked on 
+
+ Projects
+
+ 1. Parking Management System
+Technologies: C#, WinForms, MySQL
+
+University Teaching Hospital parking management system that:
+- Generates digital parking tickets
+- Shows available parking spaces
+- Allows reservations
+- Supports payment tracking
+
+Repository: 
+
+2. Task Management App
+   Technologies: php, Xampp, MySQL
+   enables users to:
+   - add tasks
+   - edit tasks
+   - update tasks
+   - delete tasks
+
+4. HTML Watch App
+Technologies: HTML, CSS, JavaScript
+
+A digital watch web application built using frontend technologies.
+
+Repository: 
+
+5. Library Management System
+   Technologies: C#, WinForms, MySQL
+
+ Skills
+- HTML, CSS, JavaScript
+- C#
+- Python
+- SQL
+- Java
+- Php
+- Laravel
+- FlutterFlow
+- Firebase
+- Database design
+
+Contact
+Email: chikontwebanda6@gmail.com 
+GitHub: https://github.com/username
