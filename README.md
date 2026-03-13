@@ -44,7 +44,7 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1
    This project opens using the setup.exe which should be placed on the desktop. login details are in the database file. a User can log in either as a member or admin.
 
    
-6. Micro Finance Application
+5. Micro Finance Application
    
       Technologies: HTML, CSS, Javascript
       - Built a micro-finance platform designed to help business
@@ -52,6 +52,9 @@ Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/1
       - receive smart recommendations on suitable loan options.
       - Added features for insurance services, savings account options, and business growth tips.
         Repository: https://github.com/ChiikontweBandaa/Chikontwe-Banda-Portfolio/blob/db35fa80b45a75d39d0c9415dc82b8342956f394/ChikontweMicroFinance.html
+        
+  
+      
 
  Skills
 - HTML, CSS, JavaScript
